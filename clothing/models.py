@@ -21,6 +21,10 @@ class Product(models.Model):
     colour = models.CharField(max_length=10, choices=COLOUR_CHOICES, default='Red')
     price = models.DecimalField(max_digits=10, decimal_places=2)
     image = models.ImageField(upload_to='product_img/')
+
+
+    def __str__(self):
+        return self.name
     
 
     
