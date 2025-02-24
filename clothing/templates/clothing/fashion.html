@@ -141,6 +141,8 @@
                 <p>Colour: {{ pro.colour }}</p>
                 <p>{{ pro.desc }}</p>
                 <p class="price">${{ pro.price }}</p>
+                <a href = "{% url 'edit_product' pro.id %}" class= "btn btn-primary">Edit</a>
+                <a href = "{% url 'delete_product' pro.id %}" class= "btn btn-danger">Delete</a>
             </div>
         {% endfor %}
     </div>
